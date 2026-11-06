@@ -33,6 +33,12 @@ The application provides secure user authentication and personalized fitness tra
 10. **Notification System:** Display notifications and unread notification counts.
 11. **Daily Workout Reminders:** Generate reminders when users access the dashboard.
 12. **Goal Completion Notifications:** Notify users when they achieve their fitness goals.
+13. **Workout Plans & Scheduling:** Schedule future workouts and manage plans using a calendar.
+14. **Exercise Library:** Create, search, categorize, and associate exercises with workouts.
+15. **Progress Comparison:** Compare weekly and monthly workout performance.
+16. **Streak Tracking:** Monitor current and longest consecutive workout streaks.
+17. **Achievement Badges:** Earn fitness badges through workouts, streaks, and goal completion.
+18. **Personalized Dashboard:** View daily summaries, upcoming workouts, goal progress, and streak statistics.
 
 ## Installation and Setup
 
@@ -145,6 +151,87 @@ Swagger UI: <br>
 * Generate notifications when fitness goals are completed.
 * Display notifications through a frontend dropdown.
 
+### Module 7: Workout Plans and Scheduling
+
+- Create personalized workout plans.
+- Schedule workouts for future dates.
+- Store workout plan details, descriptions, and scheduled dates.
+- Retrieve user-specific workout plans.
+- Display upcoming scheduled workouts.
+- View scheduled workouts through a calendar interface.
+- Navigate between calendar months.
+- Prevent scheduling workouts for past dates.
+- Validate workout plan information.
+- Maintain user-specific workout scheduling.
+
+### Module 8: Exercise Library and Workout Association
+
+- Create and manage exercise records.
+- Store exercise names, categories, descriptions, and durations.
+- Retrieve available exercises from the exercise library.
+- Search exercises by name.
+- Filter exercises by category.
+- Associate exercises with existing workout records.
+- Retrieve exercises associated with a particular workout.
+- Validate workout ownership before associating exercises.
+- Prevent duplicate exercise associations.
+- Display the exercise library through a dedicated frontend page.
+
+### Module 9: Progress Comparison and Performance Analysis
+
+- Generate weekly fitness progress comparisons.
+- Generate monthly fitness progress comparisons.
+- Compare workout counts across different periods.
+- Compare workout duration and calories burned.
+- Calculate numerical changes in fitness statistics.
+- Identify performance trends.
+- Generate progress insights based on workout activities.
+- Visualize weekly and monthly comparisons using charts.
+- Display fitness comparisons through a dedicated frontend page.
+
+### Module 10: Streak Tracking System
+
+- Track consecutive days of workout activity.
+- Calculate the current workout streak.
+- Maintain the longest workout streak.
+- Store the last workout date.
+- Update streak information based on workout activity.
+- Reset the current streak when the consecutive-day condition is broken.
+- Retrieve user-specific streak statistics.
+- Display current and longest streak information.
+- Highlight workout consistency and milestone achievements.
+- Display streak information through a dedicated frontend page.
+
+### Module 11: Achievement Badges System
+
+- Create and manage fitness achievement badges.
+- Support achievements based on workout completion.
+- Award badges for workout milestones.
+- Award streak-based achievement badges.
+- Support goal completion achievements.
+- Track badges earned by individual users.
+- Prevent duplicate badge awards.
+- Retrieve earned and locked badges.
+- Display achievement progress.
+- Highlight newly earned badges through frontend notifications.
+- Display achievements through a dedicated frontend page.
+
+### Module 12: Personalized Dashboard
+
+- Display a personalized dashboard for authenticated users.
+- Show daily workout summaries.
+- Display total workouts completed today.
+- Display daily calories burned.
+- Display total workout duration.
+- Retrieve and display upcoming scheduled workouts.
+- Display active fitness goals and their progress.
+- Show current and longest workout streaks.
+- Display goal progress using progress bars.
+- Integrate navigation links to all major FitTrack modules.
+- Provide access to notifications and logout functionality.
+- Dynamically retrieve and display user-specific fitness information.
+- Maintain a responsive dashboard layout for different screen sizes.
+
 ## API Documentation
 
 FastAPI automatically provides interactive API documentation through Swagger UI.
@@ -184,3 +271,16 @@ The API documentation provides access to authentication, workout management, dai
 * Daily workout reminder validation.
 * Goal completion notification validation.
 * Frontend and backend integration testing.
+* Workout plan creation and retrieval.
+* Upcoming workout scheduling and calendar validation.
+* Past-date scheduling prevention.
+* Exercise creation, search, and category filtering.
+* Workout-exercise association and duplicate validation.
+* Weekly and monthly progress comparison.
+* Workout performance trend and insight validation.
+* Current and longest streak calculation.
+* Streak reset validation.
+* Achievement badge creation and awarding.
+* Earned and locked badge retrieval.
+* Personalized dashboard data retrieval.
+* Dashboard navigation and responsive layout testing.
