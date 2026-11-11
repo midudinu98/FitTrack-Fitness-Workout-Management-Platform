@@ -39,6 +39,13 @@ The application provides secure user authentication and personalized fitness tra
 16. **Streak Tracking:** Monitor current and longest consecutive workout streaks.
 17. **Achievement Badges:** Earn fitness badges through workouts, streaks, and goal completion.
 18. **Personalized Dashboard:** View daily summaries, upcoming workouts, goal progress, and streak statistics.
+19. **Nutrition Tracking:** Record meals, calories, protein, carbohydrates, and fats.
+20. **Water Intake Tracking:** Record daily water consumption and monitor hydration goals.
+21. **AI Workout Suggestions:** Generate personalized workout recommendations based on fitness information.
+22. **Workout Timer:** Track workout duration and estimate calories burned during workout sessions.
+23. **Third-Party Integration:** Integrate Google Health services for fitness activity synchronization.
+24. **Advanced Analytics:** Monitor fitness performance through detailed fitness statistics and visualizations.
+25. **In-App Reminders:** Receive workout, meal, and water intake reminders.
 
 ## Installation and Setup
 
@@ -58,7 +65,7 @@ Install dependencies: <br>
 Create a .env file inside the backend folder and configure: <br>
 **SECRET_KEY=your_secret_key <br>
 ALGORITHM=HS256 <br>
-ACCESS_TOKEN_EXPIRE_MINUTES=30**
+ACCESS_TOKEN_EXPIRE_MINUTES=60**
 
 Start the backend server: <br>
 **uvicorn main:app --reload**
@@ -232,6 +239,96 @@ Swagger UI: <br>
 - Dynamically retrieve and display user-specific fitness information.
 - Maintain a responsive dashboard layout for different screen sizes.
 
+### Module 13: Nutrition and Meal Tracking
+- Create and manage daily meal records.
+- Store meal types and food names.
+- Track calories for individual meals.
+- Record protein, carbohydrates, and fats.
+- Retrieve user-specific meal history.
+- Generate daily nutrition summaries.
+- Calculate total daily calorie intake.
+- Calculate total protein, carbohydrate, and fat intake.
+- Display meal information through a dedicated Nutrition page.
+- Provide nutrition summary cards and meal history.
+- Maintain nutrition records after refreshing the application.
+
+### Module 14: Water Intake Tracking
+- Track daily water consumption.
+- Record water intake quantities in milliliters.
+- Store user-specific water intake records.
+- Maintain daily hydration goals.
+- Set a default daily water goal of 2,000 ml.
+- Calculate total daily water consumption.
+- Calculate remaining water intake.
+- Calculate hydration progress percentage.
+- Display water consumption through progress indicators.
+- Monitor daily hydration goal completion.
+- Display water intake information through a dedicated frontend page.
+
+### Module 15: AI-Based Workout Suggestions
+- Generate personalized workout recommendations.
+- Analyze existing workout history.
+- Consider personal fitness goals.
+- Analyze workout streak information.
+- Recommend suitable workout categories.
+- Suggest exercises based on fitness activities.
+- Provide recommended workout descriptions.
+- Display suggested workout durations.
+- Retrieve recommendations through a backend API.
+- Display personalized suggestions through a dedicated frontend page.
+- Integrate workout suggestions into the dashboard navigation.
+
+### Module 16: Workout Timer and Live Tracking
+- Provide a workout timer interface.
+- Start, stop, and reset workout sessions.
+- Display elapsed workout time in hours, minutes, and seconds.
+- Track workout sessions in real time.
+- Support Cardio, Strength, and Yoga workout categories.
+- Estimate calories burned based on workout category and duration.
+- Display workout session progress.
+- Save completed workout sessions.
+- Prevent saving sessions shorter than one minute.
+- Integrate saved workout sessions with the existing workout management system.
+- Display completed timer sessions in workout history.
+
+### Module 17: Third-Party Integration
+- Integrate Google Health services with FitTrack.
+- Support Google OAuth 2.0 authorization.
+- Allow users to connect their Google account.
+- Configure Google API credentials.
+- Synchronize supported daily step information.
+- Retrieve supported fitness activity information.
+- Maintain connection status.
+- Handle authorization and integration errors.
+- Support user-specific fitness data synchronization.
+- Keep integration credentials in environment variables.
+
+### Module 18: Advanced Analytics Dashboard
+- Provide an advanced fitness analytics dashboard.
+- Analyze workout performance.
+- Monitor workout frequency and consistency.
+- Display workout duration statistics.
+- Analyze calories burned.
+- Monitor nutrition and calorie intake.
+- Track daily water consumption.
+- Display fitness performance trends.
+- Provide graphical representations of fitness statistics.
+- Integrate fitness information from different tracking modules.
+- Display personalized fitness analytics through the frontend.
+
+### Module 19: In-App Reminders and Alerts
+- Generate workout reminders.
+- Generate meal reminders.
+- Generate water intake reminders.
+- Allow users to configure reminder settings.
+- Schedule automatic fitness-related notifications.
+- Maintain user-specific reminder information.
+- Generate notifications based on configured reminders.
+- Display reminder notifications through the existing notification system.
+- Maintain notification history.
+- Prevent unnecessary duplicate reminders.
+- Integrate reminders with the FitTrack dashboard.
+
 ## API Documentation
 
 FastAPI automatically provides interactive API documentation through Swagger UI.
@@ -239,7 +336,8 @@ FastAPI automatically provides interactive API documentation through Swagger UI.
 Start the backend server and access: <br>
 **http://127.0.0.1:8000/docs**
 
-The API documentation provides access to authentication, workout management, daily progress, fitness goals, reports, and notification endpoints.
+The API documentation provides access to authentication, workout management, daily progress, fitness goals, reports, notification endpoints, workout scheduling, 
+exercise management, progress comparison, streak tracking, achievement badges, nutrition tracking, water intake, workout recommendations, and integration features.
 
 ## Security
 
@@ -251,6 +349,8 @@ The API documentation provides access to authentication, workout management, dai
 * Environment-based secret key configuration.
 * Input validation using Pydantic.
 * User ownership validation for workout, goal, and notification operations.
+* Secure handling of third-party integration credentials.
+* User-specific fitness and nutrition data access.
 
 ## Testing and Validation
 
@@ -284,3 +384,20 @@ The API documentation provides access to authentication, workout management, dai
 * Earned and locked badge retrieval.
 * Personalized dashboard data retrieval.
 * Dashboard navigation and responsive layout testing.
+* Personalized dashboard data retrieval.
+* Dashboard navigation and responsive layout testing.
+* Meal creation and retrieval validation.
+* Daily nutrition summary and macronutrient calculations.
+* Nutrition data persistence testing.
+* Water intake recording and daily goal validation.
+* Hydration progress and remaining quantity calculations.
+* Personalized workout recommendation API testing.
+* Workout timer start, stop, and reset validation.
+* Workout duration and calorie estimation testing.
+* Completed workout session saving and history validation.
+* Google Health authorization and integration testing.
+* Fitness activity synchronization validation.
+* Advanced fitness analytics and visualization testing.
+* Workout, meal, and water reminder validation.
+* Reminder settings and scheduled notification testing.
+* Notification history validation.
